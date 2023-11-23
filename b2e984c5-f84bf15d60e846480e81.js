@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktwelve_o_clock_homepage=self.webpackChunktwelve_o_clock_homepage||[]).push([[702],{5317:function(L,e,c){c.d(e,{KCi:function(){return o},Vip:function(){return n}});var n="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z",o="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"}}]);
+//# sourceMappingURL=b2e984c5-f84bf15d60e846480e81.js.map
