@@ -40,7 +40,7 @@ const TwelveAppOfficial = ({ location }: Props) => (
         <h2 className="text-2xl font-bold mb-2">Ratings and Reviews</h2>
         <p className="text-slate-500 mb-12">From App Store and Google Play around the world</p>
 
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto leading-relaxed">
           {
             REVIEW_LIST.map(item => (
               <div className="mb-8" key={item.title}>
