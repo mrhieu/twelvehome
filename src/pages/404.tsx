@@ -1,49 +1,29 @@
-import * as React from "react"
-import { Link, HeadFC, PageProps } from "gatsby"
+import React from 'react';
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import Layout, { InnerContainer } from '../components/Layout';
+import { SEO } from '../components/Seo';
+import Hero from '../components/Hero';
+import Reviews from '../components/Reviews';
+import Connect from '../components/Connect';
+import Footer from '../components/Footer';
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
+type Props = {
+  location: any;
 }
 
-const NotFoundPage: React.FC<PageProps> = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+const NotFoundPage = ({ location }: Props) => (
+  <Layout>
+    <div className="h-24 min-h-full">
+      <InnerContainer>
+        <div className="flex flex-col flex-center items-center pt-24 pb-24">
+          <p className="text-2xl font-bold mb-8">Page not found</p>
+          <img src="/images/404.jpeg" className="w-24 h-24 rounded-xl" alt="a cat" />
+          <p className="text-sm text-slate-500 mt-2 mb-24">"Well, but you found me."</p>
+          <a href="/" className="text-red-400 underline">Go home ▶</a>
+        </div>
+      </InnerContainer>
+    </div>
+  </Layout>
+)
 
-export default NotFoundPage
-
-export const Head: HeadFC = () => <title>Not found</title>
+export default NotFoundPage;
