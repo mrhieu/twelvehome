@@ -7,21 +7,19 @@ type Props = {
 }
 
 const ReviewItem = ({ data }: Props) => (
-  <div className="reviewItem text-left">
-    <div className="">
-      <div className="font-bold">{ data.title }</div>
-      <div className="flex mb-2">
-        <Icon path={ mdiStar } color="#ff9500" size="16px" />
-        <Icon path={ mdiStar } color="#ff9500" size="16px" />
-        <Icon path={ mdiStar } color="#ff9500" size="16px" />
-        <Icon path={ mdiStar } color="#ff9500" size="16px" />
-        <Icon path={ data.rating === 5 ? mdiStar : mdiStarOutline } color="#ff9500" size="16px" />
-      </div>
+  <div className="reviewItem text-left break-inside-avoid">
+    <div className="font-bold">{ data.title }</div>
+    <div className="flex mb-2">
+      <Icon path={ mdiStar } color="#ff9500" size="16px" />
+      <Icon path={ mdiStar } color="#ff9500" size="16px" />
+      <Icon path={ mdiStar } color="#ff9500" size="16px" />
+      <Icon path={ mdiStar } color="#ff9500" size="16px" />
+      <Icon path={ data.rating === 5 ? mdiStar : mdiStarOutline } color="#ff9500" size="16px" />
     </div>
     <div className="text-sm mb-1 text-slate-500">
       { data.metadata }
     </div>
-    <div className="">
+    <div className="leading-relaxed">
       { data.body }
     </div>
   </div>

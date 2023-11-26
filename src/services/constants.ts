@@ -1,9 +1,15 @@
 export const REVIEW_LIST = [
   {
-    title: 'Best watch tracking app on iOS',
-    metadata: 'by wilf1803 - Oct 12, 2021 · Singapore · Version 1.4.0',
+    title: 'The best app for the job',
+    metadata: 'by scristancho4 - Jan 28, 2023 · Canada · Version 2.2.0',
     rating: 5,
-    body: 'Intuitive and simple to use. Very pleasant UI...',
+    body: 'Super happy with this. Yes, most of the apps do the same thing. But, as someone who really appreciates well-made applications and user interfaces that just work; this is the best app for the job. Super cool that the first watch is free, pretty much all I needed or care about, but the owner is so cool that I went ahead and paid the $1.30 or whatever to fully unlock the app just to support. I wish more people took something so small like this and made it modern and fun and easy to use like this app. Best of the bunch that I saw!',
+  },
+  {
+    title: 'Great way to track accuracy!',
+    metadata: 'by Dakota Watkins - Aug 29, 2022 · United States · Version 1.7.0',
+    rating: 5,
+    body: 'Small learning curve on the UI, but a few days it started to click for me. Unfortunately my accuracy sharing screenshot produces a blank page but other than that this application is great. Would recommend to any timepiece owner.',
   },
   {
     title: 'Excellent app, worth your time!',

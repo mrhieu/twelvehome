@@ -3,14 +3,21 @@ import Navbar from '../Navbar';
 
 type LayoutProps = {
   children: React.ReactNode;
-  location: any;
 }
 
-const Layout = ({ children, location }: LayoutProps) => {
+export const InnerContainer = ({ children }: LayoutProps) => {
+  return (
+    <div className="container max-w-5xl mx-auto px-4">
+      {children}
+    </div>
+  )
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="container max-w-5xl mx-auto" aria-label="Content">
+      <main aria-label="Content">
         {children}
       </main>
     </div>

@@ -1,6 +1,6 @@
 {
   "name": "twelve-o-clock-homepage",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "twelve-o-clock-homepage",
   "author": "Hieu Pham",
@@ -15,7 +15,11 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "prod": "gatsby build && gatsby serve",
-    "deploy": "gatsby build && cp CNAME public/ && cp robots.txt public/ && gh-pages -d public"
+    "deploy": "gatsby build && cp CNAME public/ && cp robots.txt public/ && gh-pages -d public",
+    "release": "standard-version",
+    "release-major": "rm -f -- package-lock.json && npm run release -- --release-as major",
+    "release-minor": "rm -f -- package-lock.json && npm run release -- --release-as minor",
+    "release-patch": "rm -f -- package-lock.json && npm run release -- --release-as patch"
   },
   "dependencies": {
     "@mdi/js": "^7.3.67",
@@ -32,6 +36,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.5",
+    "standard-version": "^9.5.0",
     "tailwindcss": "^3.3.5"
   },
   "devDependencies": {
