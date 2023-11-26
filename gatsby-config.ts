@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
     title: `Twelve O'clock Homepage`,
     description: `The home of the watch accuracy tracking app`,
     siteUrl: isProd ? `https://twelveoclock.app` : 'http://localhost:8000',
-    image: `/images/icon.png`,
+    image: `/images/banner.jpg`,
     twitterUsername: `twelveoclockapp`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
