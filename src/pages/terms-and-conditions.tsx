@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import '../styles/article.scss';
 
 type Props = {
   location: any;
@@ -12,7 +13,7 @@ const TermsAndConditions = ({ location }: Props) => (
     }}
     location={ location }
   >
-    <div className="row">
+    <div className="container max-w-5xl mx-auto px-4">
       <article className="col-lg-8 offset-lg-2">
         <div className="post-content">
           <h2 id="why">Terms And Conditions</h2>

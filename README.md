@@ -47,3 +47,42 @@
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+
+## GitHub config
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
+**Steps (GoDaddy)**
+
+1. Create A records ("@"), point your apex domain to the IP addresses for GitHub Pages.
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+2. Verify (after 15 minutes)
+
+```
+$ dig EXAMPLE.COM +noall +answer -t A
+> EXAMPLE.COM    3600    IN A     185.199.108.153
+> EXAMPLE.COM    3600    IN A     185.199.109.153
+> EXAMPLE.COM    3600    IN A     185.199.110.153
+> EXAMPLE.COM    3600    IN A     185.199.111.153
+```
+
+3. Update CNAME file
+
+```
+twelveoclockapp.com
+```
+
+
+4. Make sure to have a CNAME record
+
+```
+CNAME	www	twelveoclockapp.com.	1 Hour
+```
+
+Done!

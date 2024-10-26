@@ -1,0 +1,49 @@
+.post-content {
+  line-height: 1.5em;
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: calc(1.325rem + .9vw);
+    margin-top: 40px;
+    margin-bottom: .5rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    margin-top: 36px;
+  }
+
+  h2, h4 {
+    letter-spacing: -0.02em;
+  }
+
+  .post-body-text {
+    color: #333;
+    line-height: 1.8em;
+
+    img {
+      border-radius: 16px;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+    strong {
+      position: relative;
+      bottom: -10px;
+    }
+  }
+
+  ul {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  a {
+    color: #fd2d78;
+  }
+}
