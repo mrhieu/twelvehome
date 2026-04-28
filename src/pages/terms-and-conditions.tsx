@@ -16,7 +16,7 @@ const TermsAndConditions = ({ location }: Props) => (
     <div className="container max-w-5xl mx-auto px-4">
       <article className="col-lg-8 offset-lg-2">
         <div className="post-content">
-          <h2 id="why">Terms And Conditions</h2>
+          <h2 id="why" className="!mb-6">Terms And Conditions</h2>
 
           <p className="post-body-text">
             By downloading or using the app, these terms will

@@ -16,7 +16,7 @@ const PrivacyPolicy = ({ location }: Props) => (
     <div className="container max-w-5xl mx-auto px-4">
       <article className="col-lg-8 offset-lg-2">
         <div className="post-content">
-          <h2 id="why">Privacy Policy</h2>
+          <h2 id="why" className="!mb-6">Privacy Policy</h2>
 
           <p className="post-body-text">
             Hieu Pham built the Twelvel O'clock app as
