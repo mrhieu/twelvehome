@@ -6,10 +6,12 @@ import { mdiGooglePlay } from '@mdi/js';
 
 import './index.scss';
 
-type Props = {}
+type Props = {
+  disabled?: boolean;
+}
 
-const Navbar = ({}: Props) => (
-  <nav className="navBar shadow-sm sticky top-0">
+const Navbar = ({disabled}: Props) => (
+  <nav className={`navBar shadow-sm sticky top-0 ${disabled ? 'pointer-events-none' : ''}`}>
     <div className="container mx-auto h-16 px-4 max-w-5xl flex items-center justify-between">
       <div className="flex items-center">
         <Link to="/" className="mr-4 shrink-0">

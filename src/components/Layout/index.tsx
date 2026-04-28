@@ -3,20 +3,13 @@ import Navbar from '../Navbar';
 
 type LayoutProps = {
   children: React.ReactNode;
+  disabled?: boolean;
 }
 
-export const InnerContainer = ({ children }: LayoutProps) => {
-  return (
-    <div className="container max-w-5xl mx-auto px-4">
-      {children}
-    </div>
-  )
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, disabled }: LayoutProps) => {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar disabled={disabled} />
       <main aria-label="Content">
         {children}
       </main>
@@ -25,3 +18,11 @@ const Layout = ({ children }: LayoutProps) => {
 }
 
 export default Layout;
+
+export const InnerContainer = ({ children }: LayoutProps) => {
+  return (
+    <div className="container max-w-5xl mx-auto px-4">
+      {children}
+    </div>
+  )
+}
