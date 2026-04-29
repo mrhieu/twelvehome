@@ -7,104 +7,151 @@ import MagnetickNavbar from '../../components/MagnetickNavbar';
 const MAGNETICK_EMAIL = 'magnetickapp@gmail.com';
 
 const Feature = ({ title, body }: { title: string; body: string }) => (
-  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-    <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
-    <p className="mt-2 text-slate-600 leading-relaxed">{body}</p>
+  <div className="group">
+    <h3 className="text-base font-semibold tracking-tight text-slate-900">{title}</h3>
+    <p className="mt-3 text-[15px] leading-relaxed text-slate-500">{body}</p>
+  </div>
+);
+
+const Background = () => (
+  <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+    {/* base */}
+    <div className="absolute inset-0 bg-[#fafafa]" />
+
+    {/* soft color washes — evoking a magnetic field, kept very faint */}
+    <div className="absolute -top-40 left-1/2 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-gradient-to-br from-sky-200/40 via-indigo-100/30 to-transparent blur-3xl" />
+    <div className="absolute top-[40%] -right-32 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-rose-100/40 to-transparent blur-3xl" />
+    <div className="absolute bottom-[-10%] -left-32 h-[480px] w-[480px] rounded-full bg-gradient-to-tr from-emerald-100/30 to-transparent blur-3xl" />
+
+    {/* fine grid */}
+    <div
+      className="absolute inset-0 opacity-[0.035]"
+      style={{
+        backgroundImage:
+          'linear-gradient(to right, #0f172a 1px, transparent 1px), linear-gradient(to bottom, #0f172a 1px, transparent 1px)',
+        backgroundSize: '56px 56px',
+      }}
+    />
+
+    {/* fade grid at edges */}
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#fafafa]" />
   </div>
 );
 
 const Magnetick = () => (
-  <div className="min-h-screen bg-slate-50">
-    <MagnetickNavbar />
+  <div className="relative min-h-screen text-slate-900">
+    <Background />
 
-    <main aria-label="Content">
-      <section className="container max-w-5xl mx-auto px-4 pt-16 pb-20 text-center">
-        <img
-          src="/images/magnetick/icon.png"
-          alt="Magnetick app icon"
-          width="96"
-          height="96"
-          className="mx-auto rounded-2xl shadow-md"
-        />
-        <h1 className="mt-6 text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
-          Magnetick
-        </h1>
-        <p className="mt-4 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
-          A tiny iPhone app that turns your phone into a live magnetic field
-          reader. Point it at anything magnetic and watch the microtesla
-          reading update in real time.
-        </p>
+    <div className="relative">
+      <MagnetickNavbar />
 
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <a
-            href="https://apps.apple.com/app/magnetick/id0000000000"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="inline-flex items-center gap-2 rounded-lg bg-black px-5 py-3 text-white font-semibold hover:bg-black/80 transition"
-          >
-            <Icon path={mdiApple} size={1} />
-            Download on the App Store
-          </a>
-        </div>
-      </section>
+      <main aria-label="Content">
+        {/* Hero */}
+        <section className="container max-w-5xl mx-auto px-6 pt-28 sm:pt-36 pb-32 sm:pb-40">
+          <div className="mx-auto max-w-2xl text-center">
+            <img
+              src="/images/magnetick/icon.png"
+              alt="Magnetick app icon"
+              width="80"
+              height="80"
+              className="mx-auto rounded-[22px] shadow-[0_20px_60px_-20px_rgba(15,23,42,0.25)] ring-1 ring-slate-200/60"
+            />
 
-      <section className="container max-w-5xl mx-auto px-4 pb-20">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Feature
-            title="Live readings"
-            body="Reads your iPhone's built-in magnetometer through Apple's Core Motion framework and displays the magnetic field strength in microtesla (μT)."
-          />
-          <Feature
-            title="30-second chart"
-            body="A rolling chart visualizes the last 30 seconds of readings so you can see how the field changes as you move."
-          />
-          <Feature
-            title="Stabilization detection"
-            body="Magnetick highlights when readings settle, making it easier to spot a steady value versus environmental noise."
-          />
-          <Feature
-            title="Fully offline"
-            body="No network requests. The app works without an internet connection — anywhere, anytime."
-          />
-          <Feature
-            title="Zero data collection"
-            body="No accounts, no analytics, no advertising, no third-party trackers. Readings never leave your device."
-          />
-          <Feature
-            title="Built for curiosity"
-            body="A consumer information tool — not a calibrated scientific instrument. Great for tinkering, not for safety-critical use."
-          />
-        </div>
-      </section>
+            <h1 className="mt-10 text-5xl sm:text-6xl font-semibold tracking-[-0.03em] text-slate-900">
+              Magnetick
+            </h1>
 
-      <section className="container max-w-5xl mx-auto px-4 pb-24">
-        <div className="rounded-2xl bg-white border border-slate-200 p-8 sm:p-10 text-center shadow-sm">
-          <Icon path={mdiEmailOutline} size={1.5} className="mx-auto text-slate-700" />
-          <h2 className="mt-3 text-2xl font-semibold text-slate-900">Get in touch</h2>
-          <p className="mt-2 text-slate-600 max-w-xl mx-auto">
-            Questions, feedback, or bug reports? Email is the only support
-            channel for Magnetick — we read every message.
-          </p>
-          <a
-            href={`mailto:${MAGNETICK_EMAIL}`}
-            className="mt-6 inline-block text-lg font-semibold text-slate-900 underline underline-offset-4 hover:text-slate-700"
-          >
-            {MAGNETICK_EMAIL}
-          </a>
-        </div>
-      </section>
+            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-slate-500">
+              A live magnetic field reader for iPhone.
+              <br className="hidden sm:block" />
+              Quiet, offline, and respectfully simple.
+            </p>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="container max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
-          <span>© {new Date().getFullYear()} Magnetick</span>
-          <div className="flex items-center gap-4">
-            <Link to="/magnetick/policy" className="hover:text-slate-700">Privacy Policy</Link>
-            <Link to="/magnetick/terms" className="hover:text-slate-700">Terms</Link>
-            <a href={`mailto:${MAGNETICK_EMAIL}`} className="hover:text-slate-700">Contact</a>
+            <div className="mt-12 flex items-center justify-center">
+              <a
+                href="https://apps.apple.com/app/magnetick/id0000000000"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800"
+              >
+                <Icon path={mdiApple} size={0.85} />
+                Download on the App Store
+              </a>
+            </div>
           </div>
-        </div>
-      </footer>
-    </main>
+        </section>
+
+        {/* Features */}
+        <section className="container max-w-5xl mx-auto px-6 pb-32 sm:pb-40">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">
+              What it does
+            </p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">
+              Small app, focused job.
+            </h2>
+          </div>
+
+          <div className="mt-20 grid gap-x-12 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            <Feature
+              title="Live readings"
+              body="Reads your iPhone's built-in magnetometer through Core Motion and displays the field strength in microtesla."
+            />
+            <Feature
+              title="30-second chart"
+              body="A rolling chart visualizes the last 30 seconds of readings so you can see how the field changes as you move."
+            />
+            <Feature
+              title="Stabilization"
+              body="Magnetick highlights when readings settle, making it easier to spot a steady value versus environmental noise."
+            />
+            <Feature
+              title="Fully offline"
+              body="No network requests. The app works without an internet connection — anywhere, anytime."
+            />
+            <Feature
+              title="No data collection"
+              body="No accounts, no analytics, no advertising, no trackers. Readings never leave your device."
+            />
+            <Feature
+              title="Built for curiosity"
+              body="A consumer information tool — not a calibrated instrument. Great for tinkering, not for safety-critical use."
+            />
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section className="container max-w-5xl mx-auto px-6 pb-32 sm:pb-40">
+          <div className="mx-auto max-w-xl text-center">
+            <Icon path={mdiEmailOutline} size={1.1} className="mx-auto text-slate-400" />
+            <h2 className="mt-6 text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">
+              Get in touch.
+            </h2>
+            <p className="mt-5 text-[15px] leading-relaxed text-slate-500">
+              Questions, feedback, or bug reports — email is the only
+              support channel for Magnetick. Every message is read.
+            </p>
+            <a
+              href={`mailto:${MAGNETICK_EMAIL}`}
+              className="mt-10 inline-block text-base font-medium text-slate-900 underline decoration-slate-300 decoration-1 underline-offset-[6px] transition hover:decoration-slate-900"
+            >
+              {MAGNETICK_EMAIL}
+            </a>
+          </div>
+        </section>
+
+        <footer className="border-t border-slate-200/70">
+          <div className="container max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+            <span>© {new Date().getFullYear()} Magnetick</span>
+            <div className="flex items-center gap-6">
+              <Link to="/magnetick/policy" className="hover:text-slate-700 transition">Privacy</Link>
+              <Link to="/magnetick/terms" className="hover:text-slate-700 transition">Terms</Link>
+              <a href={`mailto:${MAGNETICK_EMAIL}`} className="hover:text-slate-700 transition">Contact</a>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
   </div>
 );
 
