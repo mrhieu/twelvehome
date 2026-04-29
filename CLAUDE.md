@@ -4,17 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing/homepage site for the **Twelve O'clock** watch-accuracy tracking app, deployed at `twelveoclock.app`. Built with **Gatsby 5 + TypeScript**, styled with **Tailwind CSS** plus **Sass** (for `article.scss`). Node version pinned to **v18.16.0** (`.nvmrc`).
+Marketing/homepage site for the **Twelve O'clock** watch-accuracy tracking app, deployed at `twelveoclock.app`. Built with **Gatsby 5 + TypeScript**, styled with **Tailwind CSS** plus **Sass** (for `article.scss`). Node version pinned to **v24.11.1** (`.nvmrc`); `engines.node` in `package.json` enforces `>=24 <25`.
 
 ## Commands
 
-- `yarn dev` / `yarn start` — `gatsby develop` on `http://localhost:8000`
-- `yarn build` — production build into `public/`
-- `yarn serve` — serve a built site locally (`yarn prod` chains build + serve)
-- `yarn clean` — clears `.cache/` and `public/` (run when GraphQL typegen or plugin config changes seem stuck)
-- `yarn typecheck` — `tsc --noEmit` (no test framework is configured)
-- `yarn deploy` — builds, copies `CNAME` and `robots.txt` into `public/`, then publishes via `gh-pages`. Deployment target is GitHub Pages with a custom apex domain — see `README.md` for the GoDaddy A-record setup.
-- `yarn release-major | release-minor | release-patch` — `standard-version` release; the script deletes `package-lock.json` first because the project uses **yarn** (only `yarn.lock` is committed).
+- `npm run dev` / `npm start` — `gatsby develop` on `http://localhost:8000`
+- `npm run build` — production build into `public/`
+- `npm run serve` — serve a built site locally (`npm run prod` chains build + serve)
+- `npm run clean` — clears `.cache/` and `public/` (run when GraphQL typegen or plugin config changes seem stuck)
+- `npm run typecheck` — `tsc --noEmit` (no test framework is configured)
+- `npm run deploy` — builds, copies `CNAME` and `robots.txt` into `public/`, then publishes via `gh-pages`. Deployment target is GitHub Pages with a custom apex domain — see `README.md` for the GoDaddy A-record setup.
+- `npm run release-major | release-minor | release-patch` — `standard-version` release. The project uses **npm** (only `package-lock.json` is committed).
 
 ## Architecture notes
 

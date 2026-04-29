@@ -3,7 +3,16 @@
     "allow": [
       "Bash(yarn typecheck *)",
       "Bash(git check-ignore *)",
-      "Bash(npm view *)"
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(git stash *)",
+      "Bash(curl -fsS -o /dev/null -w \"homepage HTTP %{http_code}\\\\n\" http://localhost:8000/)",
+      "Bash(curl -fsS -o /dev/null -w \"privacy-policy HTTP %{http_code}\\\\n\" http://localhost:8000/privacy-policy/)",
+      "Bash(curl -fsS -o /dev/null -w \"terms HTTP %{http_code}\\\\n\" http://localhost:8000/terms-and-conditions/)",
+      "Bash(kill 6042)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   }
 }
