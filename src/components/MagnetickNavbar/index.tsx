@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Icon from '@mdi/react';
 import { mdiApple } from '@mdi/js';
 
+import { MAGNETICK_APP_STORE_URL } from '../../constants/magnetick';
 import './index.scss';
 
 const MagnetickNavbar = () => (
@@ -21,7 +22,7 @@ const MagnetickNavbar = () => (
         </div>
       </div>
       <div className="download-links flex items-center gap-2">
-        <a href="https://apps.apple.com/app/magnetick/id0000000000" target="_blank" rel="noreferrer noopener">
+        <a href={MAGNETICK_APP_STORE_URL} target="_blank" rel="noreferrer noopener">
           <Icon path={mdiApple} className="h-8" color="#64748b" />
         </a>
       </div>

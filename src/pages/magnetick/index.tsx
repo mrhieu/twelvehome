@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Icon from '@mdi/react';
 import { mdiApple, mdiEmailOutline } from '@mdi/js';
 import MagnetickNavbar from '../../components/MagnetickNavbar';
+import { MAGNETICK_APP_STORE_URL } from '../../constants/magnetick';
 
 const MAGNETICK_EMAIL = 'magnetickapp@gmail.com';
 
@@ -69,7 +70,7 @@ const Magnetick = () => (
 
             <div className="mt-12 flex items-center justify-center">
               <a
-                href="https://apps.apple.com/app/magnetick/id0000000000"
+                href={MAGNETICK_APP_STORE_URL}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800"

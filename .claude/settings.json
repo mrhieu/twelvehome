@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(yarn typecheck *)"
+      "Bash(yarn typecheck *)",
+      "Bash(git check-ignore *)",
+      "Bash(npm view *)"
     ]
   }
 }
