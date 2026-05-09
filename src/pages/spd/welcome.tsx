@@ -21,7 +21,7 @@ const Welcome = ({ location }: Props) => (
           </p>
         </div>
       
-        <a href="spd://settings" className="rounded-lg px-4 py-3 bg-black hover:bg-black/50 transition duration-300 text-gray-100 font-semibold">
+        <a href="spd://settings?ref=welcome" className="rounded-lg px-4 py-3 bg-black hover:bg-black/50 transition duration-300 text-gray-100 font-semibold">
           Go back to App
           <Icon path={ mdiChevronRight } className="inline h-8" />
         </a>
